@@ -9,7 +9,8 @@ const app = express();
 app.server = http.createServer(app);
 
 app.use(express.static("public"));
-app.use(express.static("dist"));
+app.use(express.static("built"));
+app.use(express.static("node_modules"));
 
 app.use(cors());
 app.use("/status", statusRouter);
