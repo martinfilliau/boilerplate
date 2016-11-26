@@ -8,6 +8,9 @@ import PassengerContactsCtrl from './components/passenger.contacts/passenger-con
 import PassengerThanksCtrl from './components/passenger.thanks/passenger-thanks.controller';
 import PassengerChoiceCtrl from './components/passenger.choice/passenger-choice.controller';
 import PassengerCancellationCtrl from './components/passenger.cancellation/passenger-cancellation.controller';
+import PassengerCancellationConfirmCtrl from './components/passenger.cancellation.confirm/passenger-cancellation-confirm.controller';
+import PassengerHotelCtrl from './components/passenger.hotel/passenger-hotel.controller';
+import PassengerHotelConfirmCtrl from './components/passenger.hotel.confirm/passenger-hotel-confirm.controller';
 
 var myApp = angular.module('myApp', [uiRouter]);
 
@@ -58,7 +61,23 @@ myApp.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRoute
             controller: PassengerCancellationCtrl 
         })
 
+        .state('passenger-cancellation-confirm', {
+            url: '/passenger/cancellation-confirm',
+            templateUrl: 'components/passenger.cancellation.confirm/passenger-cancellation-confirm.html',
+            controller: PassengerCancellationConfirmCtrl 
+        })
 
+        .state('passenger-hotel', {
+            url: '/passenger/hotel',
+            templateUrl: 'components/passenger.hotel/passenger-hotel.html',
+            controller: PassengerHotelCtrl 
+        })
+
+        .state('passenger-hotel-confirm', {
+            url: '/passenger/hotel-confirm',
+            templateUrl: 'components/passenger.hotel.confirm/passenger-hotel-confirm.html',
+            controller: PassengerHotelConfirmCtrl 
+        })
 
     ;
 }]);

@@ -1,4 +1,4 @@
-export default class PassengerChoiceCtrl {
+export default class PassengerHotelCtrl {
 
 	constructor($scope, $state){
         this.$state = $state;
@@ -9,12 +9,10 @@ export default class PassengerChoiceCtrl {
 
     validate() {
         const { choice } = this.$scope;
-        if (choice === "cancel") {
-            this.$state.go("passenger-cancellation");
-        } else if (choice === "hotel") {
-            this.$state.go("passenger-hotel");
-        } else if (choice === "own") {
-
+        if (choice === "no") {
+            this.$state.go("passenger-choice");
+        } else if (choice === "yes") {
+            this.$state.go("passenger-hotel-confirm");
         }
     }
 }
