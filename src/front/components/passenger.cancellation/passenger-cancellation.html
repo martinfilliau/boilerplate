@@ -1,0 +1,32 @@
+<img src="logo.png" />
+<div class="container">
+    <div> 
+        <p>Cher Monsieur Howel,</p>
+        <p>Vous avez décidé d'annuler votre vol AF977 pour l'ensemble des passagers de votre réservation :</p>
+        <ul>
+            <li>Vincent Howel</li>
+            <li>Emma Howel</li>
+            <li>Manon Howel</li>
+            <li>Gabriel Howel</li>
+        </ul>
+        <p>Confirmez-vous définitivement ce choix ?</p>
+    </div>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <input type="radio" group="choice" ng-model="choice" value="yes">
+            <label for="abort">Oui</label>
+        </div>
+        <div class="form-group">
+            <input type="radio" group="choice" ng-model="choice" value="no">
+            <label for="abort">Non</label>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default" ng-click="validate()">Valider</button>
+            </div>
+          </div>
+    </form>
+</div>
+

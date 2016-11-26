@@ -1,0 +1,37 @@
+<img src="logo.png" />
+<div class="container">
+    <div> 
+        <p>Cher Monsieur Howel,</p>
+        <p>Nous avons le regret de vous informer que votre vol doit être reporté à demain (28/11/2016), 16h50.</p>
+        <p>Que souhaitez-vous faire ?</p>
+        <p>Votre décision concerne l'ensemble des passagers de votre réservation :</p>
+        <ul>
+            <li>Vincent Howel</li>
+            <li>Emma Howel</li>
+            <li>Manon Howel</li>
+            <li>Gabriel Howel</li>
+        </ul>
+    </div>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <input type="radio" value="cancel" group="choice" ng-model="choice">
+            <label for="abort">Je ne veux plus partir, je souhaite annuler mon départ</label>
+        </div>
+        <div class="form-group">
+             <input type="radio" value="hotel" group="choice" ng-model="choice">
+            <label for="abort">Je souhaite disposer d'un hébergement par Air France</label>
+        </div>
+        <div class="form-group">
+            <input type="radio" value="own" group="choice" ng-model="choice">
+            <label for="abort">J'ai ma propre solution d'hébergement</label>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default" ng-click="validate()">Valider</button>
+            </div>
+          </div>
+    </form>
+</div>
+
