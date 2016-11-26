@@ -1,0 +1,5 @@
+<ul>
+    <li ng-repeat="pnr in allPnrs track by $index">
+        {{pnr.pnrNumber}} - Nombre de passagers: {{pnr.paxDetails.length}} - {{pnr.phone}} - {{pnr.mail}}
+    </li>
+</ul>
