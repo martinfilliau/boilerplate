@@ -1,0 +1,6 @@
+# Notiflight
+
+## Running
+
+    npm start
+
