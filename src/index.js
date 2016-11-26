@@ -8,8 +8,11 @@ const app = express();
 
 app.server = http.createServer(app);
 
+app.use(express.static("public"));
+
 app.use(cors());
 app.use("/status", statusRouter);
+
 
 app.listen(3000, () => {
     console.log("listening on port 3000");
