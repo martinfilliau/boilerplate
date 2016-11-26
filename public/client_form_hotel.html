@@ -21,45 +21,28 @@
         <div class="container">
             <div> 
                 <p>Cher Monsieur Howel,</p>
-                <p>Nous souhaitons confirmer avec vous l'ensemble des éléments ci-dessous :</p>
+                <p>Vous avez décidé de bénéficier de l'offre d'hébergement proposée par Air France pour l'ensemble des passagers de votre réservation :</p>
                 <ul>
-                    <li>Votre vol est le AF977 du 27/11/2016</li>
-                    <li>Votre référence dossier est BBB222</li>
-                    <li>Les passagers de la réservation sont :
-                        <ul>
-                            <li>Vincent Howel</li>
-                            <li>Emma Howel</li>
-                            <li>Manon Howel</li>
-                            <li>Gabriel Howel</li>
-                        </ul>
-                    </li>
+                    <li>Vincent Howel</li>
+                    <li>Emma Howel</li>
+                    <li>Manon Howel</li>
+                    <li>Gabriel Howel</li>
                 </ul>
-            </div>
-
-            <div>
-                <p>Confirmez-vous ces informations ?</p>
-                <input type="radio">Oui</input>
-                <input type="radio">Non</input>
-            </div>
-
-            <div ng-if="confirmation === false">
-                <p>Veuillez-vous rapprocher du comptoir Air France pour régler votre situation</p>
-            </div>
+                <p>Confirmez-vous définitivement ce choix ?</p>
+           </div>
 
         <form class="form-horizontal" ng-if="confirmation === true">
-          <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Tel. (SMS)</label>
-            <div class="col-sm-10">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="+33">
+            <div class="form-group">
+                <input type="radio" group="choice">
+                <label for="abort">Oui</label>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-            <div class="col-sm-10">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="@gmail.com">
+            <div class="form-group">
+                <input type="radio" group="choice">
+                <label for="abort">Non</label>
+                <!-- TODO retour page précédente -->
             </div>
-          </div>
-          <div class="form-group">
+
+        <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
               <button type="submit" class="btn btn-default">Valider</button>
             </div>
