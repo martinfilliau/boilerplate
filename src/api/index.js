@@ -10,6 +10,7 @@ app.server = http.createServer(app);
 
 app.use(express.static("public"));
 app.use(express.static("built"));
+app.use(express.static("src/front/")); // TO DO need to be improved
 
 app.use(cors());
 app.use("/status", statusRouter);

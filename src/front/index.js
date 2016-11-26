@@ -1,28 +1,16 @@
-import angular from "angular";
+import angular from 'angular';
+import LandingCtrl from './components/landing/landing.controller';
+import uiRouter from 'angular-ui-router';
+var myApp = angular.module('myApp', [uiRouter]);
 
-
-var myApp = angular.module('myApp', ['ui.router']);
-
-myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+myApp.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
         .state('landing', {
             url: '/',
             templateUrl: 'components/landing/landing.html',
-            controller: 'LandingCtrl'
+            controller: LandingCtrl
         })
     ;
 }]);
-
-
-
-//class AppCtrl {
-//  constructor() {
-//      this.coucou = "yes";
-//  }
-//}
-//
-//angular.module("app", [])
-//  .controller('AppCtrl', AppCtrl);
-

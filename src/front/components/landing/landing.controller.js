@@ -1,6 +1,7 @@
-myApp.controller('LandingCtrl', ['$scope', '$state', '$timeout', 'LandingService', function ($scope, $state, $timeout, LandingService, Continents, Countries, state) {
-	"use strict";
+export default class LandingCtrl {
 
-	$scope.paxName = "maalej";
-
-}]);
+	constructor($scope){
+		this.$scope = $scope;
+		this.$scope.paxName = "maalej";
+	}
+}
