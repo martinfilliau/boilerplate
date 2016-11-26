@@ -3,3 +3,5 @@ built/
 npm-debug.log
 .idea
 yarn.lock
+.DS_Store
+
