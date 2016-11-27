@@ -5,9 +5,8 @@
 
 #pnr-analytics {
     flex-grow: 1;
-    height:200px;
-    color: rgb(27, 62, 106);
-    background-color: #9da0a4;
+    max-height: 30%;
+    overflow-y: auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
