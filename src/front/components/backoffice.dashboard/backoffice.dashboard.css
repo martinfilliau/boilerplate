@@ -1,0 +1,41 @@
+#dashboard {
+    display: flex;
+    flex-direction: column;
+}
+
+#pnr-analytics {
+    flex-grow: 1;
+    height:200px;
+    background-color: #9da0a4;
+}
+
+#pnr-pax-details {
+    flex-grow: 1;
+    height:200px;
+    background-color: rgb(27, 62, 106);;
+    color: aliceblue;
+}
+
+b {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+#pnr-list > table > tbody > tr > td {
+    padding: 0 0 3px 3px;
+}
+
+#pnr-list {
+    height: 50%;
+    overflow-y: auto;
+    margin: 10px;
+}
+
+hr {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#pnr-list input {
+    width: 100%;
+}
