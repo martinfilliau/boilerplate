@@ -1,6 +1,41 @@
 import * as express from "express";
 import _ from 'lodash';
 export const pnrsRouter = express.Router();
+
+//[
+//	{
+//		'repeat(90)': {
+//			pnrNumber:'{{lorem(1, "words")}}{{integer(0, 1000)}}',
+//			paxDetails: [
+//				{
+//					'repeat(1, 5)':{
+//						paxName:'{{firstName(["male"])}}',
+//						paxSurname:'{{firstName(["female"])}}',
+//						paxCivil:'{{random(["MRS"], ["MR"], ["MISS"], ["INF"])}}',
+//						paxGender:'{{random(["ADT"], ["CHD"], ["INFT"])}}',
+//						paxClassCode:'{{random(["W"], ["Y"], ["F"])}}',
+//						ticketNumber: '0{{integer(0, 100)}} {{integer(0, 100000000)}}/{{integer(1, 8)}}',
+//						paxDocs: {
+//							paxDocType:'{{random(["PSPT"], ["ID"])}}',
+//							paxDocNumber:'{{lorem(1, "words")}}{{integer(0, 1000)}}',
+//							paxDocIssued:'{{country()}}',
+//							paxDocExpiry:'{{moment(this.date(new Date(), new Date(2020, 0, 1) ))}}'
+//						},
+//						birthDate: '{{moment(this.date(new Date(1910, 0, 1), new Date()))}}'
+//					}
+//				}
+//			],
+//			language: '{{random(["FR"], ["EN"], ["KOR"], ["JAP"], ["AR"])}}',
+//			paxDecision: '{{random(["HOTEL"], ["CHEZ LUI"], ["N/A"], ["ANNULATION"])}}',
+//			assignedHotel: '{{random(["Radisson Blu"], ["Le Meridien"], ["PARC INN"], ["Royal Palm Hotel"])}}',
+//			logement:'{{random(["1 Chbr."], ["2 Chbr."], ["3 Chbr."])}}',
+//			'customerJourney': 'AF{{integer(0, 1000)}}/{{integer(1, 30)}} {{lorem(1, "words")}} {{integer(0, 23)}}h{{integer(0, 59)}} - {{integer(0, 23)}}h{{integer(0, 59)}}',
+//			complementaryService:'{{lorem(1, "sentences")}}',
+//			phone: '+({{integer(1, 971)}}) {{integer(0, 100000000)}}',
+//			mail: '{{lorem(1, "words")}}@{{lorem(1, "words")}}.{{random(["com"], ["fr"], ["net"])}}'
+//		}
+//	}
+//]
 const ALL_PNRS = [
 	{
 		"pnrNumber": "BBB222",
