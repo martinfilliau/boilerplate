@@ -1,23 +1,27 @@
 <div id="dashboard">
     <div id="pnr-analytics">
-        <horizontal-barchart
-                id="decision-stats-chart"
-                width="320"
-                height="400"
-                on-click="angular.noop"
+        <div>
+            <b>DECISION PAX</b>
+            <horizontal-barchart
+                    id="decision-stats-chart"
+                    width="320"
+                    height="400"
+                    on-click="angular.noop"
 
-                key-field="data"
-                key-label="data"
+                    key-field="data"
+                    key-label="data"
 
-                primary-data="decisionStats"
-                primary-value-field="occurrences"
-                primary-bar-class=""
+                    primary-data="decisionStats"
+                    primary-value-field="occurrences"
+                    primary-bar-class=""
 
-                secondary-data="[]"
-                secondary-value-field=""
-                secondary-bar-class=""
-        >
-        </horizontal-barchart>
+                    secondary-data="[]"
+                    secondary-value-field=""
+                    secondary-bar-class=""
+            >
+            </horizontal-barchart>
+        </div>
+
 
         <div class="pnr-contact" style="width: 100vw;">
             <form class="form-group">
@@ -34,24 +38,28 @@
             </form>
         </div>
 
-        <horizontal-barchart
-                id="hotel-stats-chart"
-                width="320"
-                height="400"
-                on-click="angular.noop"
+        <div>
+            <b>REPARTITION PAR HOTEL</b>
+            <horizontal-barchart
+                    id="hotel-stats-chart"
+                    width="320"
+                    height="400"
+                    on-click="angular.noop"
 
-                key-field="data"
-                key-label="data"
+                    key-field="data"
+                    key-label="data"
 
-                primary-data="hotelsStats"
-                primary-value-field="occurrences"
-                primary-bar-class=""
+                    primary-data="hotelsStats"
+                    primary-value-field="occurrences"
+                    primary-bar-class=""
 
-                secondary-data="[]"
-                secondary-value-field=""
-                secondary-bar-class=""
-        >
-        </horizontal-barchart>
+                    secondary-data="[]"
+                    secondary-value-field=""
+                    secondary-bar-class=""
+            >
+            </horizontal-barchart>
+        </div>
+
     </div>
 
     <div id="progress-bar" class="progress">

@@ -28,29 +28,30 @@ export default class DashboardCtrl {
         this.$scope.changedMessage = this.changedMessage.bind(this);
 	}
 
+	reduceToPaxLeven (pnrs) {
+		return _.reduce(pnrs, (acc, pnr) => {
+			return acc + pnr.paxDetails.length;
+		}, 0);
+	};
+
 	calculateDecisionStats() {
 		const grouping = _.groupBy(this.$scope.allPnrs, 'paxDecision');
-        const reduced = (pnrs) => {
-            return _.reduce(pnrs, (acc, pnr) => {
-                return acc + pnr.paxDetails.length;
-            }, 0);
-        };
 		this.$scope.decisionStats = [
 			{
 				data: 'HOTEL',
-				occurrences: reduced(grouping['HOTEL'])
+				occurrences: this.reduceToPaxLeven(grouping['HOTEL'])
 			},
 			{
 				data: 'CHEZ LUI',
-				occurrences: reduced(grouping['CHEZ LUI'])
+				occurrences: this.reduceToPaxLeven(grouping['CHEZ LUI'])
 			},
 			{
 				data: 'N/A',
-				occurrences: reduced(grouping['N/A'])
+				occurrences: this.reduceToPaxLeven(grouping['N/A'])
 			},
 			{
 				data: 'ANNULATION',
-				occurrences: reduced(grouping['ANNULATION'])
+				occurrences: this.reduceToPaxLeven(grouping['ANNULATION'])
 			},
 		];
 		/*setInterval(() => {
@@ -80,23 +81,22 @@ export default class DashboardCtrl {
 
 	calculateHotelStats() {
 		const grouping = _.groupBy(this.$scope.allPnrs, 'assignedHotel');
-		console.log({grouping});
 		this.$scope.hotelsStats = [
 			{
 				data: 'Radisson Blu',
-				occurrences: grouping['Radisson Blu'].length
+				occurrences: this.reduceToPaxLeven(grouping['Radisson Blu'])
 			},
 			{
 				data: 'Le Meridien',
-				occurrences: grouping['Le Meridien'].length
+				occurrences: this.reduceToPaxLeven(grouping['Le Meridien'])
 			},
 			{
 				data: 'PARC INN',
-				occurrences: grouping['PARC INN'].length
+				occurrences: this.reduceToPaxLeven(grouping['PARC INN'])
 			},
 			{
 				data: 'Royal Palm Hotel',
-				occurrences: grouping['Royal Palm Hotel'].length
+				occurrences: this.reduceToPaxLeven(grouping['Royal Palm Hotel'])
 			},
 		];
 	}

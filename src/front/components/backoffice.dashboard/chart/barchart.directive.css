@@ -7,11 +7,11 @@
 }
 .horizontal-barchart-cls .primaryBar rect.transparentBar,
 .horizontal-barchart-cls .secondaryBar rect.transparentBar {
-    fill: blue;
+    fill: #d1d1d1;
 }
 .horizontal-barchart-cls .primaryBar rect.blueBar,
 .horizontal-barchart-cls .secondaryBar rect.blueBar {
-    fill: blue;
+    fill: #d1d1d1;
 }
 .horizontal-barchart-cls .primaryBar rect.brownBar,
 .horizontal-barchart-cls .secondaryBar rect.brownBar {
@@ -24,10 +24,10 @@
     padding-left: 10px;
 }
 .horizontal-barchart-cls .label.blueBar {
-    color: white;
+    color: #000;
 }
 .horizontal-barchart-cls .label.brownBar {
-    color: white;
+    color: #000;
 }
 .horizontal-barchart-cls .grid {
     shape-rendering: crispEdges;
