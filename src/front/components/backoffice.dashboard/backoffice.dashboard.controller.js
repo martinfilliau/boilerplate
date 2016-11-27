@@ -30,25 +30,30 @@ export default class DashboardCtrl {
 
 	calculateDecisionStats() {
 		const grouping = _.groupBy(this.$scope.allPnrs, 'paxDecision');
+        const reduced = (pnrs) => {
+            return _.reduce(pnrs, (acc, pnr) => {
+                return acc + pnr.paxDetails.length;
+            }, 0);
+        };
 		this.$scope.decisionStats = [
 			{
 				data: 'HOTEL',
-				occurrences: grouping['HOTEL'].length
+				occurrences: reduced(grouping['HOTEL'])
 			},
 			{
 				data: 'CHEZ LUI',
-				occurrences: grouping['CHEZ LUI'].length
+				occurrences: reduced(grouping['CHEZ LUI'])
 			},
 			{
 				data: 'N/A',
-				occurrences: grouping['N/A'].length
+				occurrences: reduced(grouping['N/A'])
 			},
 			{
 				data: 'ANNULATION',
-				occurrences: grouping['ANNULATION'].length
+				occurrences: reduced(grouping['ANNULATION'])
 			},
 		];
-		setInterval(() => {
+		/*setInterval(() => {
 			this.$timeout(() => {
 				this.$scope.decisionStats = [
 					{
@@ -70,6 +75,7 @@ export default class DashboardCtrl {
 				];
 			});
 		}, 5000);
+        */
 	}
 
 	calculateHotelStats() {
