@@ -1,22 +1,56 @@
 <div id="dashboard">
     <div id="pnr-analytics">
         <horizontal-barchart
-            id="hBarChart"
-            width="320"
-            height="400"
-            on-click="angular.noop"
+                id="decision-stats-chart"
+                width="320"
+                height="400"
+                on-click="angular.noop"
 
-            key-field="data"
-            key-label="data"
+                key-field="data"
+                key-label="data"
 
-            primary-data="decisionStats"
-            primary-value-field="occurrences"
-            primary-bar-class=""
+                primary-data="decisionStats"
+                primary-value-field="occurrences"
+                primary-bar-class=""
 
-            secondary-data="[]"
-            secondary-value-field=""
-            secondary-bar-class=""
-            >
+                secondary-data="[]"
+                secondary-value-field=""
+                secondary-bar-class=""
+        >
+        </horizontal-barchart>
+
+        <div class="pnr-contact" style="width: 100vw;">
+            <form class="form-group">
+
+            <select class="form-control" ng-model="message" ng-change="changedMessage()">
+              <option value="late">Vol en retard</option>
+              <option value="hosting">Besoin d'hébergement</option>
+              <option value="foundHotel">Hôtel trouvé</option>
+              <option value="bus">Bus vers hôtel</option>
+            </select>
+
+            <textarea class="form-control" rows="3" ng-model="value"></textarea>
+            <button type="button" class="btn btn-warning">Envoyer le message aux pax correspondant aux filtres</button>
+            </form>
+        </div>
+
+        <horizontal-barchart
+                id="hotel-stats-chart"
+                width="320"
+                height="400"
+                on-click="angular.noop"
+
+                key-field="data"
+                key-label="data"
+
+                primary-data="hotelsStats"
+                primary-value-field="occurrences"
+                primary-bar-class=""
+
+                secondary-data="[]"
+                secondary-value-field=""
+                secondary-bar-class=""
+        >
         </horizontal-barchart>
     </div>
 
