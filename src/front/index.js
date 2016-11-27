@@ -3,6 +3,7 @@ import uiRouter from 'angular-ui-router';
 
 import LandingCtrl from './components/landing/landing.controller';
 import DashboardCtrl from './components/backoffice.dashboard/backoffice.dashboard.controller';
+import HorizontalBarchart from './components/backoffice.dashboard/chart/barchart.directive';
 import PassengerDetailsCtrl from './components/passenger.details/passenger-details.controller';
 import PassengerContactsCtrl from './components/passenger.contacts/passenger-contacts.controller';
 import PassengerThanksCtrl from './components/passenger.thanks/passenger-thanks.controller';
@@ -15,7 +16,8 @@ import PassengerOwnCtrl from './components/passenger.own/passenger-own.controlle
 import PassengerOwnConfirmCtrl from './components/passenger.own.confirm/passenger-own-confirm.controller';
 
 var myApp = angular.module('myApp', [uiRouter]);
-
+console.log(HorizontalBarchart);
+myApp.directive('horizontalBarchart', HorizontalBarchart);
 myApp.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
     $urlRouterProvider.otherwise('/');
 
