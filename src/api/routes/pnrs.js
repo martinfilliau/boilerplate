@@ -3,6 +3,94 @@ import _ from 'lodash';
 export const pnrsRouter = express.Router();
 const ALL_PNRS = [
 	{
+		"pnrNumber": "BBB222",
+		"paxDetails": [
+			{
+				"paxName": "Vincent",
+				"paxSurname": "Howel",
+				"paxCivil": "MR",
+				"paxGender": "ADT",
+				"paxClassCode": "W",
+				"ticketNumber": "084 77600477/1",
+				"paxDocs": {
+					"paxDocType": "ID",
+					"paxDocNumber": "ullamco729",
+					"paxDocIssued": "French",
+					"paxDocExpiry": "Mon Jun 04 2018 02:38:42 GMT+0000"
+				},
+				"birthDate": "Sun Sep 20 1914 21:44:17 GMT+0000"
+			},
+			{
+				"paxName": "Vincent",
+				"paxSurname": "Emma",
+				"paxCivil": "MRS",
+				"paxGender": "ADT",
+				"paxClassCode": "W",
+				"ticketNumber": "084 77600477/1",
+				"paxDocs": {
+					"paxDocType": "ID",
+					"paxDocNumber": "ullamco729",
+					"paxDocIssued": "French",
+					"paxDocExpiry": "Mon Jun 04 2018 02:38:42 GMT+0000"
+				},
+				"birthDate": "Sun Sep 20 1914 21:44:17 GMT+0000"
+			},
+            {
+				"paxName": "Manon",
+				"paxSurname": "Howel",
+				"paxCivil": "MISS",
+				"paxGender": "CHD",
+				"paxClassCode": "W",
+				"ticketNumber": "040 72900227/8",
+				"paxDocs": {
+					"paxDocType": "PSPT",
+					"paxDocNumber": "voluptate201",
+					"paxDocIssued": "Burundi",
+					"paxDocExpiry": "Sun Sep 17 2017 12:31:55 GMT+0000"
+				},
+				"birthDate": "Wed Aug 16 1961 19:21:20 GMT+0000"
+			},
+			{
+				"paxName": "Gabriel",
+				"paxSurname": "Howel",
+				"paxCivil": "MISS",
+				"paxGender": "CHD",
+				"paxClassCode": "W",
+				"ticketNumber": "028 41747982/4",
+				"paxDocs": {
+					"paxDocType": "PSPT",
+					"paxDocNumber": "esse288",
+					"paxDocIssued": "Jordan",
+					"paxDocExpiry": "Tue Dec 13 2016 22:18:03 GMT+0000"
+				},
+				"birthDate": "Tue Mar 03 1987 00:56:56 GMT+0000"
+			},
+			{
+				"paxName": "Théo",
+				"paxSurname": "Howel",
+				"paxCivil": "INF",
+				"paxGender": "INFT",
+				"paxClassCode": "W",
+				"ticketNumber": "028 41747982/4",
+				"paxDocs": {
+					"paxDocType": "PSPT",
+					"paxDocNumber": "esse288",
+					"paxDocIssued": "Jordan",
+					"paxDocExpiry": "Tue Dec 13 2016 22:18:03 GMT+0000"
+				},
+				"birthDate": "Tue Mar 03 1987 00:56:56 GMT+0000"
+			}
+		],
+		"language": "FR",
+		"paxDecision": "HOTEL",
+		"assignedHotel": "Le Meridien",
+		"logement": "1 Chbr.",
+		"customerJourney": "AF462/19 non 6h23 - 14h18",
+		"complementaryService": "AVIH - Saint bernard 30 KG (chien en soute)",
+		"phone": "+241 456789",
+		"mail": "howellfamily@gmail.com"
+	},
+	{
 		"pnrNumber": "sit605",
 		"paxDetails": [
 			{
