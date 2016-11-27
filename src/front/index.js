@@ -11,6 +11,8 @@ import PassengerCancellationCtrl from './components/passenger.cancellation/passe
 import PassengerCancellationConfirmCtrl from './components/passenger.cancellation.confirm/passenger-cancellation-confirm.controller';
 import PassengerHotelCtrl from './components/passenger.hotel/passenger-hotel.controller';
 import PassengerHotelConfirmCtrl from './components/passenger.hotel.confirm/passenger-hotel-confirm.controller';
+import PassengerOwnCtrl from './components/passenger.own/passenger-own.controller';
+import PassengerOwnConfirmCtrl from './components/passenger.own.confirm/passenger-own-confirm.controller';
 
 var myApp = angular.module('myApp', [uiRouter]);
 
@@ -77,6 +79,18 @@ myApp.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRoute
             url: '/passenger/hotel-confirm',
             templateUrl: 'components/passenger.hotel.confirm/passenger-hotel-confirm.html',
             controller: PassengerHotelConfirmCtrl 
+        })
+
+        .state('passenger-own', {
+            url: '/passenger/own',
+            templateUrl: 'components/passenger.own/passenger-own.html',
+            controller: PassengerOwnCtrl 
+        })
+
+        .state('passenger-own-confirm', {
+            url: '/passenger/own-confirm',
+            templateUrl: 'components/passenger.own.confirm/passenger-own-confirm.html',
+            controller: PassengerOwnConfirmCtrl 
         })
 
     ;

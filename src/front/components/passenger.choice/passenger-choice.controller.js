@@ -14,7 +14,7 @@ export default class PassengerChoiceCtrl {
         } else if (choice === "hotel") {
             this.$state.go("passenger-hotel");
         } else if (choice === "own") {
-
+            this.$state.go("passenger-own");
         }
     }
 }
