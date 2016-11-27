@@ -51,7 +51,10 @@
             </thead>
 
             <tbody>
-            <tr ng-repeat="pnr in allPnrs | filter : pnrFilter track by $index" ng-click="showPnrDetails(pnr)">
+            <tr ng-repeat="pnr in (filteredPnrs = (allPnrs | filter : pnrFilter)) track by $index"
+                ng-click="showPnrDetails(pnr, $index)"
+                ng-class="{'selected-pnr': selectedPnrIndex === $index}"
+            >
                 <td>{{pnr.pnrNumber}}</td>
                 <td>{{pnr.paxDetails.length}}</td>
                 <td>{{pnr.class}}</td>

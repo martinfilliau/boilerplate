@@ -6,19 +6,28 @@
 #pnr-analytics {
     flex-grow: 1;
     height:200px;
+    color: rgb(27, 62, 106);
     background-color: #9da0a4;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 #pnr-pax-details {
     flex-grow: 1;
-    height:200px;
     background-color: rgb(27, 62, 106);;
     color: aliceblue;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 b {
     margin-left: 10px;
     font-size: 16px;
+}
+
+#pnr-list > table > tbody > .selected-pnr {
+    background-color: rgb(235, 53, 53);
+    color: aliceblue;
 }
 
 #pnr-list > table > tbody > tr > td {
