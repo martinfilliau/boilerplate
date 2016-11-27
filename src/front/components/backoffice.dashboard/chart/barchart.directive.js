@@ -8,7 +8,7 @@
  ============================================================================*/
 
 import d3 from 'd3';
-import d3Tip from 'd3-tip';
+//import d3Tip from 'd3-tip';
 import _ from 'lodash';
 
 /**
