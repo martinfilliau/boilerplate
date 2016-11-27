@@ -5159,9 +5159,15 @@ const correctHotel = () => {
 		pnr.assignedHotel = pnr.paxDecision !== 'HOTEL' ? '' : pnr.assignedHotel;
 	});
 };
+const amendLogement = () => {
+    ALL_PNRS.forEach((pnr) => {
+        pnr.logement = pnr.paxDecision !== "HOTEL" ? '' : pnr.logement;
+    });
+};
 
 addClassLabel();
 correctHotel();
+amendLogement();
 
 pnrsRouter.get("/", (req, res) => {
 	res.json(ALL_PNRS);
