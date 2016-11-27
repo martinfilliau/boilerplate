@@ -8,11 +8,6 @@ export default class PassengerOwnConfirmCtrl {
 	}
 
     validate() {
-        const { choice } = this.$scope;
-        if (choice === "no") {
-            this.$state.go("passenger-choice");
-        } else if (choice === "yes") {
-            this.$state.go("passenger-hotel-confirm");
-        }
+        this.$state.go("passenger-own-thanks");
     }
 }

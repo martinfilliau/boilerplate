@@ -81,6 +81,12 @@ myApp.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRoute
             controller: PassengerHotelConfirmCtrl 
         })
 
+        .state('passenger-hotel-thanks', {
+            url: '/passenger/hotel-thanks',
+            templateUrl: 'components/passenger.hotel.thanks/message.html',
+            controller: PassengerThanksCtrl 
+        })
+
         .state('passenger-own', {
             url: '/passenger/own',
             templateUrl: 'components/passenger.own/passenger-own.html',
@@ -91,6 +97,12 @@ myApp.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRoute
             url: '/passenger/own-confirm',
             templateUrl: 'components/passenger.own.confirm/passenger-own-confirm.html',
             controller: PassengerOwnConfirmCtrl 
+        })
+
+        .state('passenger-own-thanks', {
+            url: '/passenger/own-thanks',
+            templateUrl: 'components/passenger.own.thanks/message.html',
+            controller: PassengerThanksCtrl 
         })
 
     ;
