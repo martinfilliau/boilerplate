@@ -1,5 +1,22 @@
 <div id="dashboard">
-    <div id="pnr-analytics">fdsfds</div>
+    <div id="pnr-analytics">
+    
+        <div class="pnr-contact" style="width: 100vw;">
+            <form class="form-group">
+
+            <select class="form-control" ng-model="message" ng-change="changedMessage()">
+              <option value="late">Vol en retard</option>
+              <option value="hosting">Besoin d'hébergement</option>
+              <option value="foundHotel">Hôtel trouvé</option>
+              <option value="bus">Bus vers hôtel</option>
+            </select>
+
+            <textarea class="form-control" rows="3" ng-model="value"></textarea>
+            <button type="button" class="btn btn-warning">Envoyer le message à tout les passagers de la liste</button>
+            </form>
+        </div>
+
+    </div>
 
     <div id="pnr-list">
         <table class="table table-striped table-bordered">
